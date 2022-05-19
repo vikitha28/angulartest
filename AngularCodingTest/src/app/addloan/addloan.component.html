@@ -1,0 +1,40 @@
+<p>addloan works!</p>
+<form #loanForm="ngForm">
+    {{loanForm.value | json}}<br>
+    {{loan | json}}
+<table>
+    <tr>
+        <td><label>loanid</label></td>
+        <td><input [(ngModel)]="loan.loanid" name="txtloanid"></td>
+    </tr>
+
+    <tr>
+        <td><label>loanCustemerName</label></td>
+        <td><input [(ngModel)]="loan.loanCustemerName" name="txtloanCustemerName"></td>
+    </tr>
+
+    <tr>
+        <td><label>loanAmount</label></td>
+        <td><input [(ngModel)]="loan.loanAmount" name="txtloanAmount"></td>
+    </tr>
+
+    <tr>
+        <td><label>dateOfLoan</label></td>
+        <td><input [(ngModel)]="loan.dateOfLoan" name="txtdateOfLoan"></td>
+    </tr>
+    <tr>
+        <td><label>tenure</label></td>
+        <td><input [(ngModel)]="loan.tenure" name="txtmtenure"></td>
+    </tr>
+    <tr>
+        <td><label>RateOfInterest</label></td>
+        <td><input [(ngModel)]="loan.RateOfInterest" name="txtRateOfInterest"></td>
+    </tr>
+
+    <tr>
+        <td colspan="2">
+            <button (click)="add()">Add</button>
+        </td>
+    </tr>
+</table>
+</form>
